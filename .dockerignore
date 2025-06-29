@@ -1,0 +1,30 @@
+# Node modules
+backend/node_modules
+backend/dist
+
+# Development files
+backend/.env
+backend/.env.local
+
+# Logs
+backend/*.log
+
+# Build artifacts
+backend/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore

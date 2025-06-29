@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "61db0182-b580-4950-87f8-03184ea44f57",
+		"name": "ct519",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39588156"
+	},
+	"item": [
+		{
+			"name": "w4-group-car",
+			"item": [
+				{
+					"name": "add-users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็ค",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jackson/Downloads/IMG_2025.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/users",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "BMW",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "750e",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://thumbor.roddonjai.com/unsafe/351x197/media.roddonjai.com/CAR/CAR202503280110_BMW_750e_20250328_141209866_WATERMARK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/cars",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-car",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "brand",
+									"value": "BMW",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "750e",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://thumbor.roddonjai.com/unsafe/351x197/media.roddonjai.com/CAR/CAR202503280110_BMW_750e_20250328_141209866_WATERMARK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/cars/2",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"cars",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็คสัน",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/users/2",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็คสัน",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/users/2",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-cars",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็คสัน",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/cars/1",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-users-byid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็ค",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jackson/Downloads/IMG_2025.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/users/1",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-cars-byid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็ค",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jackson/Downloads/IMG_2025.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/cars/1",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"cars",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็ค",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jackson/Downloads/IMG_2025.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/users",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-cars",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "เวงกวง แต",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "แจ็ค",
+									"type": "text"
+								},
+								{
+									"key": "studentNumber",
+									"value": "67130397",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/jackson/Downloads/IMG_2025.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ct-519-w4}}/api/cars",
+							"host": [
+								"{{ct-519-w4}}"
+							],
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
