@@ -1,0 +1,64 @@
+services:
+  ct519_backend:
+    build:
+      context: .
+      target: backend
+    image: ct519_w4_backend:0.1
+    container_name: ct519_backend
+    ports:
+      - "2010:3000"
+    depends_on:
+      - ct519_db
+    environment:
+      DATABASE_URL: "mysql://appuser:apppass@ct519_db:3306/appdb"
+      NODE_ENV: production
+    networks:
+      - ct519_network
+
+  ct519_frontend:
+    build:
+      context: .
+      target: frontend-prod
+    image: ct519_w4_frontend_prod:0.1
+    container_name: ct519_frontend
+    ports:
+      - "2011:80"
+    depends_on:
+      - ct519_backend
+    networks:
+      - ct519_network
+
+  ct519_db:
+    image: mariadb:11
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppass
+    ports:
+      - "2012:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - ct519_network
+
+  ct519_admin:
+    image: phpmyadmin:latest
+    container_name: ct519_admin
+    platform: linux/x86_64
+    restart: always
+    environment:
+        PMA_HOST: ct519_db
+        PMA_PORT: 3306
+        UPLOAD_LIMIT: 3000M
+    ports:
+    - "2013:80"
+    networks:
+    - ct519_network
+
+volumes:
+  db_data:
+
+networks:
+  ct519_network:
+    driver: bridge
