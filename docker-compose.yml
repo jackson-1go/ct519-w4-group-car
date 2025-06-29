@@ -1,0 +1,57 @@
+services:
+  ct519_backend:
+    build: .
+    image: ct519_w4_backend:0.1
+    container_name: ct519_backend
+    ports:
+      - "2010:3000"
+    depends_on:
+      - ct519_db
+    environment:
+      DATABASE_URL: "mysql://appuser:apppass@ct519_db:3306/appdb"
+      NODE_ENV: development
+    volumes:
+      - ./backend/src:/app/src
+      - ./backend/prisma:/app/prisma
+      - ./backend/package.json:/app/package.json
+      - ./backend/tsconfig.json:/app/tsconfig.json
+      - ./backend/uploads:/app/uploads
+      - /app/node_modules
+    command: ["bun", "run", "dev"]
+    networks:
+      - ct519_network
+
+  ct519_db:
+    image: mariadb:11
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppass
+    ports:
+      - "2012:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - ct519_network
+
+  ct519_admin:
+    image: phpmyadmin:latest
+    container_name: ct519_admin
+    platform: linux/x86_64
+    restart: always
+    environment:
+        PMA_HOST: ct519_db
+        PMA_PORT: 3306
+        UPLOAD_LIMIT: 3000M
+    ports:
+    - "2013:80"
+    networks:
+    - ct519_network
+
+volumes:
+  db_data:
+
+networks:
+  ct519_network:
+    driver: bridge
