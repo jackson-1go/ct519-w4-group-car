@@ -169,7 +169,37 @@ const App = () => {
             ))}
           </div>
         </Tab>
+ <Tab eventKey="contact" title="ข้อมูลผู้ติดต่อ">
+  <div className="row mt-3">
 
+    <div className="col-md-3 text-center">
+      <img
+        src="https://scontent.fbkk6-1.fna.fbcdn.net/v/t39.30808-6/491594165_1856842875065188_647366527083552581_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHml4x5LsfCeKMlf54FqriDv05dPNwqmqi_Tl083CqaqIh5e8xIZx9IAOth4hAvGmkWs9UV0GvFsRXT0INLBi5l&_nc_ohc=ipQos8agh0kQ7kNvwHpnBsG&_nc_oc=AdkiDfkRZPXu2-yUx3615mduB4K-rfM2QimQ2YTeXwGUx7_B8Ln0IhQUEiKPr39JXLE&_nc_zt=23&_nc_ht=scontent.fbkk6-1.fna&_nc_gid=sCnlGQ5-oGeRCtKvmV1hcA&oh=00_AfMD_-xDuCyfZYnvHjj_byjeMqFI6zIpIVSlAIWEQMZSgA&oe=6866BA29"
+        alt="Member 1"
+        className="img-fluid rounded-circle mb-2"
+        style={{ width: '120px', height: '120px', objectFit: 'cover' }}
+      />
+      <h6>นายเวงกวง แต</h6>
+      <p className="mb-1">ชื่อเล่น: แจ็ค</p>
+      <small>รหัสนักศึกษา: 67130397</small>
+    </div>
+
+    <div className="col-md-3 text-center">
+      <img
+        src="https://scontent.fbkk6-1.fna.fbcdn.net/v/t39.30808-6/336770703_212754278075210_1296293011194265980_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE34Xv-jO5KsKhb-CvJ7vdiWqtRf5ftdkJaq1F_l-12Qmz5Vv5fQto4OU-rhNNg8RAle2tkOX-JNeNM6ngfJtP6&_nc_ohc=m7Lm7WqzyawQ7kNvwE1cKae&_nc_oc=AdkRGjurPR7VhoQ6fPGGqXZWrJKpWM2Ytq1iDEhEvDOUj9NhpgW2XC6j-aD0OEfeDo4&_nc_zt=23&_nc_ht=scontent.fbkk6-1.fna&_nc_gid=KxpHOQjSEtIBvrKpxGm0Og&oh=00_AfND6d8Eg2FwhFFnOdfrRM76-Qk_tRVBJ-n_Tsa6YLgeZA&oe=6866CCC8"
+        alt="Member 2"
+        className="img-fluid rounded-circle mb-2"
+        style={{ width: '120px', height: '120px', objectFit: 'cover' }}
+      />
+      <h6>นางสาวศุภดา สุทธา</h6>
+      <p className="mb-1">ชื่อเล่น: ครีม</p>
+      <small>รหัสนักศึกษา: 67130709</small>
+    </div>
+
+    {/* เพิ่มสมาชิกคนอื่นๆ ตรงนี้ */}
+
+  </div>
+</Tab>
       </Tabs>
 
       {/* Modal แก้ไข */}
